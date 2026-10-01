@@ -137,7 +137,7 @@ int main() {
         // accept
         struct sockaddr_in client_addr = {};
         socklen_t addrlen = sizeof(client_addr);
-        int connfd = accept(fd, (struct sockaddr *)&client_addr, &addrlen);
+        int connfd = accept(fd, (struct sockaddr *) &client_addr, &addrlen);
         if (connfd < 0) {
             continue;   // error
         }
